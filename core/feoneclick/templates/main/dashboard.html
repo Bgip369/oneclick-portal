@@ -1,0 +1,30 @@
+{% extends 'format//base-dashboard.html' %}
+{% block content %}
+<div class="container-fluid p-2 bg-primary text-white text-center">
+    <h1>Users</h1>
+</div>
+<div class="container mt-5">
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Username</th>
+                <th>Email</th>
+                <th>Phone</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for text in texts %}
+            <tr>
+                <td>{{ text.id }}</td>
+                <td>{{ text.name }}</td>
+                <td>{{ text.username }}</td>
+                <td>{{ text.email }}</td>
+                <td>{{ text.phone }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock content %}
